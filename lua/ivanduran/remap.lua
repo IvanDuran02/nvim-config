@@ -10,6 +10,9 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- Map <Leader>w to save the current file
+vim.api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', { noremap = true })
+
 vim.keymap.set("n", "<leader>vwm", function()
     require("vim-with-me").StartVimWithMe()
 end)
